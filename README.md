@@ -1,1 +1,0 @@
-openssl x509 -req -in moleszczuk.net.csr  -CA ../ca.pem  -CAkey ../ca.key -CAcreateserial -out moleszczuk.net.crt -days 365 -sha256 -extfile moleszczuk.net.ext
