@@ -1,4 +1,4 @@
-const apiURL = 'https://moleszczuk.net:3000'
+const apiURL = 'https://moleszczuk.org/rest'
 async function postData(url = '', data = {}) {
     // Default options are marked with *
     const response = await fetch(url, {
@@ -20,12 +20,12 @@ async function postData(url = '', data = {}) {
 function getDb(event){
     event.preventDefault();
     const input = document.getElementById('restInput');
-    fetch(`${apiURL}/db`).then(response => response.json()).then(data => input.value = data.value);
+    fetch(`${apiURL}`).then(response => response.json()).then(data => input.value = data.value);
 }
 
 function postDb(event){
     event.preventDefault();
     const input = document.getElementById('restInput');
-    postData(`${apiURL}/db`, {value: input.value});
+    postData(`${apiURL}`, {value: input.value});
 }
 
